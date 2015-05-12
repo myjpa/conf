@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# get current script directory
+# http://stackoverflow.com/questions/59895/can-a-bash-script-tell-what-directory-its-stored-in
+DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
+
+# install .vimrc
+cp ~/.vimrc ~/.vimrc.bak
+cp $DIR/vimrc ~/.vimrc
+# install vundle and all plugins
+if [ ! -d ~/.vim/bundle/Vundle.vim ]
+then
+  echo "clone Vundle.vim..."
+  git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+fi
+vim +PluginInstall +qall
+
