@@ -22,6 +22,9 @@ Plugin 'tpope/vim-surround'
 Plugin 'pangloss/vim-javascript'
 Plugin 'nathanaelkane/vim-indent-guides' "visible-indentation
 Plugin 'ap/vim-css-color' "css coloring
+Plugin 'tpope/vim-vividchalk'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'mustache/vim-mustache-handlebars'
 " ui
 Plugin 'bling/vim-airline' "fancy status-bar
 
@@ -37,6 +40,9 @@ let g:ctrlp_custom_ignore = {
   \ }
 " vim-airline always show
 set laststatus=2
+" fix NERDTree not opening sub directory problem
+" http://stackoverflow.com/a/8758710/81754
+let g:NERDTreeDirArrows=0
 
 " All system-wide defaults are set in $VIMRUNTIME/debian.vim (usually just
 " /usr/share/vim/vimcurrent/debian.vim) and sourced by the call to :runtime
