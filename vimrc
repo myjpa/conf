@@ -44,6 +44,12 @@ set laststatus=2
 " http://stackoverflow.com/a/8758710/81754
 let g:NERDTreeDirArrows=0
 
+
+" adding mustache auto-close
+" https://github.com/mustache/vim-mustache-handlebars
+let g:mustache_abbreviations = 1
+
+
 " All system-wide defaults are set in $VIMRUNTIME/debian.vim (usually just
 " /usr/share/vim/vimcurrent/debian.vim) and sourced by the call to :runtime
 " you can find below.  If you wish to change any of those settings, you should
