@@ -138,9 +138,5 @@ nmap b <Leader><Leader>b
 nnoremap . <c-o>
 nnoremap , <c-i>
 
-
 "gui font
 set guifont=Monospace\ 20
-"filetypes
-au! BufRead,BufNewFile *.m setfiletype objc
-au BufRead,BufNewFile *.handlebars,*.hbs set ft=handlebars
