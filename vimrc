@@ -121,7 +121,6 @@ set viminfo='20,\"50	" read/write a .viminfo file, don't store more
 set history=50		" keep 50 lines of command line history
 set ruler		" show the cursor position all the time
 set smartindent
-colorscheme vividchalk
 "set nu!			"added line numbers on the left of screen
 set tabstop=2
 set shiftwidth=2 
@@ -131,13 +130,6 @@ set expandtab
 nmap <space> <c-f>
 map <c-n> gt
 map <c-p> gT
-map <c-a> :A<cr>
-imap <c-a> <esc>:A<cr>
-"imap <c-a> <esc>^i
-imap <c-e> <esc>$a
-" find file mapping http://www.vim.org/scripts/script.php?script_id=1899
-let g:FindFileIgnore=['*.o','*.pyc','*/tmp/*','*/.*/*']
-nmap <c-t> :FindFile<cr>
 nmap w <Leader><Leader>w
 nmap b <Leader><Leader>b
 " prev/next location
@@ -146,3 +138,12 @@ nnoremap , <c-i>
 
 "gui font
 set guifont=Monospace\ 20
+
+" colorscheme, overriding some vividchalk colors
+colorscheme vividchalk
+"override search color, as vividchalk highlight color is invisible
+"in 256 color
+highlight Search        guifg=White guibg=Red ctermfg=Black ctermbg=Brown
+" set comment color
+" http://stackoverflow.com/a/5830145
+hi Comment ctermfg=grey
